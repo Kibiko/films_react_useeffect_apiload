@@ -1,6 +1,7 @@
 const Film = ({film}) => {
 
-    const castMembers = film.roles.filter((roles) => roles.voice).map((role) => {
+    const castMembers = film.roles.filter((roles) => roles.voice) //filters the truthy roles.voice
+    .map((role) => { //then maps
         return <li key={role.id}>{role.voice}</li>
     });
 
